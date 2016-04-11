@@ -1,0 +1,21 @@
+{
+  "name": "com.likalo.ui",
+  "author": "MiM Development Team",
+  "version": "0.1.0",
+  "description": "",
+  "license": "Proprietary",
+  "dependencies": {
+    "@iamadamjowett/angular-click-outside": "^2.7.0",
+    "angular": "^1.5.2",
+    "connect-livereload": "~0.3.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-ng-annotate": "^1.0.1",
+    "load-grunt-tasks": "~0.2.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

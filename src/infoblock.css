@@ -1,0 +1,33 @@
+/* INFOBLOCK */
+
+.UI-info-block {
+    color: #TextShade;
+    fill: #TextShade;
+    position: relative;
+}
+.UI-info-block--info>.UI-info-block--decorator {
+  fill: #1b9aaa;
+}
+.UI-info-block--alert>.UI-info-block--decorator {
+  fill: #ef476f;
+}
+.UI-info-block--help>.UI-info-block--decorator {
+  fill: #ffc43d;
+}
+
+.UI-info-block--decorator {
+  width: 2em;
+  height: 100%;
+  position: absolute;
+}
+
+.UI-decorator--base {
+    width: 0.2em;
+    x: 50%;
+    transform: translateX(-0.1em);
+}
+
+.UI-info-block--content {
+    padding: 0.5em;
+    padding-left: 2.5em;
+}

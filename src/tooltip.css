@@ -1,0 +1,67 @@
+.UI-tooltip {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  padding: 0.5em;
+  z-index: 999;
+  transition: 300ms;
+}
+.UI-tooltip--top,
+.UI-tooltip--right,
+.UI-tooltip--bottom,
+.UI-tooltip--left {
+ opacity: 1;
+}
+.UI-tooltip--container {
+  max-width: 16em;
+  padding: 0.5em 1em;
+  font-size: 80%;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.9);
+  color: #fff;
+}
+.UI-tooltip--header {
+ font-weight: bold;
+ margin-bottom: -0.2em;
+}
+.UI-tooltip--label {
+ word-wrap: break-word;
+}
+.UI-tooltip--arrow {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+     border-left: 0.5em solid transparent;
+     border-right: 0.5em solid transparent;
+     border-top: 0.5em solid transparent;
+     border-bottom: 0.5em solid transparent;
+}
+.UI-tooltip--top>.UI-tooltip--arrow {
+ border-top: 0.5em solid rgba(0,0,0,0.9);
+ border-bottom: none;
+ margin-left: -0.5em;
+ left: 50%;
+ bottom: 0;
+}
+.UI-tooltip--bottom>.UI-tooltip--arrow {
+ border-top: none;
+ border-bottom: 0.5em solid rgba(0,0,0,0.9);
+ margin-left: -0.5em;
+ left: 50%;
+ top: 0;
+}
+.UI-tooltip--left>.UI-tooltip--arrow {
+ border-left: 0.5em solid rgba(0,0,0,0.9);
+ border-right: none;
+ margin-top: -0.5em;
+ right: 0;
+ top: 50%;
+}
+.UI-tooltip--right>.UI-tooltip--arrow {
+ border-left: none;
+ border-right: 0.5em solid rgba(0,0,0,0.9);
+ margin-top: -0.5em;
+ left: 0;
+ top: 50%;
+}

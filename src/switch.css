@@ -1,0 +1,48 @@
+/* SWITCH */
+
+.UI-checkbox, .UI-radio, .UI-switch {
+ width: auto;
+ height: 1.6em;
+ vertical-align: middle;
+}
+
+.UI-toggle,
+.UI-toggle--label{
+  cursor: pointer;
+}
+.UI-toggle {
+  fill: #AccentColor;
+  stroke: #AccentColor;
+}
+.UI-toggle[disabled],
+.UI-picker[disabled],
+[disabled]>.UI-toggle,
+[disabled]>.UI-picker,
+.UI-toggle--label.disabled,
+.UI-toggle--label[disabled],
+[disabled]>.UI-toggle--label {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=40);
+    -khtml-opacity: 0.40;
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.UI-toggle>.UI-toggle--base {
+  fill: #BackgroundColor;
+  stroke-width: 2;
+}
+.UI-toggle>.UI-toggle--knob {
+  opacity: 0.1;
+  transition: 300ms;
+}
+.UI-switch>.UI-toggle--knob{
+  opacity: 0.5;
+}
+.UI-toggle.active>.UI-toggle--knob {
+  opacity: 1;
+}
+.UI-switch.active>.UI-toggle--knob{
+  transform: translateX(100%);
+}

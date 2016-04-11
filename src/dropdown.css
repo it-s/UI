@@ -1,0 +1,167 @@
+/* PICKER/Dropdown */
+
+.UI-picker {
+    position: relative;
+    display: block;
+    /*min-width: 12em;*/
+}
+.pure-form .UI-picker {
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.pure-form-aligned .UI-picker {
+    display: inline-block;
+}
+
+.UI-picker--label {
+    width: 100%;
+    padding: 0.5em 0.6em;
+    border: 2px solid;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-color: #AccentColor;
+    border-radius: 4px;
+}
+.layout--menu-list .UI-picker--label {
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ box-shadow: none;
+ border-radius: 0;
+}
+
+.layout--menu-list .UI-picker.active .UI-picker--label {
+ background-color: #AccentColor;
+ color: #AccentText;
+ fill: #AccentText;
+}
+
+
+.UI-picker.active .UI-picker--label
+.UI-picker--label,
+.UI-picker--list li {
+  white-space: nowrap;
+  text-align: left;
+}
+
+/*.UI-picker--carret {
+    margin-left: 0.5em;
+}*/
+
+.UI-picker--list {
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    /*min-width: 100%;*/
+    transition-property: opacity;
+    transition-duration: 300ms;
+}
+.active .UI-picker--list {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+.UI-picker--list {
+    background-color: #BackgroundColor;
+    left: 0;
+    margin: 0.5em 0;
+    padding: 0;
+    z-index: 3;
+    border: 1px solid #BorderColor;
+    border-radius: 2px;
+}
+.UI-picker--list:before {
+ position: absolute;
+ content: " ";
+ width: 0;
+ height: 0;
+ left: 50%;
+ margin-left: -0.5em;
+}
+.UI-picker.top .UI-picker--list{
+    bottom: 100%;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.3);
+}
+.UI-picker.top .UI-picker--list:before {
+ border-left: 0.5em solid transparent;
+ border-right: 0.5em solid transparent;
+ border-top: 0.5em solid #BackgroundColor;
+ bottom: -0.5em;
+}
+.UI-picker.bottom .UI-picker--list{
+    top: 100%;
+    box-shadow: 0 -0.5em 1em rgba(0,0,0,0.3);
+}
+.UI-picker.bottom .UI-picker--list:before {
+ border-left: 0.5em solid transparent;
+ border-right: 0.5em solid transparent;
+ border-bottom: 0.5em solid #BackgroundColor;
+ top: -0.5em;
+}
+.UI-picker--label-image {
+ margin-right: 0.5em;
+}
+.UI-picker--list-label:not(:first-child) {
+  margin-left: 0.5em;
+}
+
+.UI-dropdown .UI-picker--list-image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.UI-palette .UI-picker--list {
+    white-space: nowrap;
+}
+.UI-palette .pure-menu-item {
+    display: inline-block;
+}
+.UI-palette .UI-picker--list-label {
+    display: none;
+}
+
+.UI-gallery .pure-menu-list {
+    display: flex;
+    min-width: 12em;
+    flex-flow: row wrap;
+}
+.UI-gallery .pure-menu-item {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+.UI-gallery.gallery-u-1-2 .pure-menu-item { width: 50%;}
+.UI-gallery.gallery-u-1-3 .pure-menu-item { width: 33.3%;}
+.UI-gallery.gallery-u-1-4 .pure-menu-item { width: 25%;}
+.UI-gallery.gallery-u-1-5 .pure-menu-item { width: 20%;}
+.UI-gallery.gallery-u-1-6 .pure-menu-item { width: 16.6%;}
+
+.UI-gallery .UI-picker--list-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.UI-gallery .UI-picker--list-label {
+    font-size: 60%;
+    text-overflow: ellipsis;
+}
+/* Special cases */
+.app-toolbar .UI-picker .UI-picker--list {
+  background-color: #AccentColor;
+  border-color: #AccentColor;
+}
+.app-toolbar .UI-picker.bottom .UI-picker--list:before {
+  border-bottom-color: #AccentColor;
+}
+.app-toolbar .UI-picker.top .UI-picker--list:before {
+  border-top-color: #AccentColor;
+}
+.app-toolbar .UI-picker .UI-picker--label {
+  border: none;
+}

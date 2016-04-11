@@ -1,0 +1,56 @@
+/* ICONS */
+
+svg:not(:root){overflow:hidden}
+.svg--color-invert {
+  /* WebKit */
+    -webkit-filter: invert();
+/* Firefox */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='negative'><feColorMatrix values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#negative");
+/* IE 6-7 */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(invert=1);
+/* IE 8 */
+    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(invert=1)';
+}
+svg.UI-icon {
+ display: inline;
+ fill: inherit;
+ stroke: none;
+ width: 1.2em;
+ height: 1.2em;
+ vertical-align: text-bottom;
+}
+svg.UI-icon.UI-icon--small {
+  width: 0.8em;
+  height: 0.8em;
+}
+svg.UI-icon.UI-icon--big {
+  width: 2em;
+  height: 2em;
+}
+svg.UI-icon>.UI-layer--hover,
+svg.UI-icon>.UI-layer--active,
+svg.UI-icon.UI-icon--active-base-hide.active>.UI-layer--base,
+svg.UI-icon.UI-icon--hover-base-hide:hover>.UI-layer--base {
+  opacity: 0;
+}
+svg.UI-icon:hover>.UI-layer--hover,
+svg.UI-icon:active>.UI-layer--active,
+svg.UI-icon.active>.UI-layer--active {
+  display: block;
+}
+svg.UI-monogram {
+ display: inline;
+ width: 2em;
+ height: 2em;
+ vertical-align: text-bottom;
+}
+.UI-monogram--base {
+  fill: #BackgroundColor;
+  stroke: #AccentColor;
+  stroke-width: 1.5;
+}
+.UI-monogram--glyph {
+  fill: #AccentColor;
+  letter-spacing: -1;
+  text-transform: capitalize;
+}

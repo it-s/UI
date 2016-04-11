@@ -1,0 +1,27 @@
+/*.UI-scrollable,*/
+
+.UI-scrollable--container {
+    padding-right: 0.5em;
+}
+.UI-scrollbar {
+}
+.UI-scrollbar {
+    width: 0.5em;
+    cursor: pointer;
+}
+.UI-scrollbar--base{
+    fill: rgba(0,0,0,0.4);
+    opacity: 0.3;
+}
+.UI-scrollbar--knob{
+    fill: #BackgroundColor;
+    opacity: 0.5;
+}
+.UI-scrollbar:hover .UI-scrollbar--base,
+.UI-scrollbar:hover .UI-scrollbar--knob,
+.UI-scrollbar:active .UI-scrollbar--base,
+.UI-scrollbar:active .UI-scrollbar--knob,
+.UI-scrollbar:focus .UI-scrollbar--base,
+.UI-scrollbar:focus .UI-scrollbar--knob{
+    opacity: 1;
+}

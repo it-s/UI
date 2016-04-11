@@ -1,0 +1,42 @@
+.UI-fab--menu .pure-menu-link {
+    margin: 0.8em;
+    padding: 0;
+    border-radius: 1.5em;
+    background-color: #BackgroundColor;
+}
+.UI-fab--menu .pure-menu-active > .pure-menu-link,
+.UI-fab--menu .pure-menu-link:hover,
+.UI-fab--menu .pure-menu-link:focus {
+    background-color: #BackgroundHover;
+}
+.UI-fab--menu .UI-icon {
+    margin: 0.5em;
+}
+.UI-fab--button {
+    width: 3.5em;
+    height: 3.5em;
+    border: none;
+    border-radius: 2.5em;
+    background-color: #AccentColor;
+    color: #AccentText;
+    fill: #AccentText;
+}
+.UI-fab--button .UI-icon {
+    fill: #AccentText;
+}
+.UI-fab--button .UI-layer--active,
+.UI-fab--button.active .UI-layer--base {
+    opacity: 0;
+    transition: 300ms;
+    display: block;
+}
+.UI-fab--button .UI-layer--base,
+.UI-fab--button.active .UI-layer--active  {
+    opacity: 1;
+    transition: 300ms;
+    display: block;
+}
+.UI-fab--button,
+.UI-fab--menu .pure-menu-link {
+    box-shadow: 0 0.2em 1em rgba(0,0,0,0.5);
+}

@@ -1,0 +1,29 @@
+/* SLIDER */
+
+.UI-slider {
+    width: 100%;
+    min-width: 5em;
+    fill: #AccentColor;
+    stroke: #AccentColor;
+    height: 2em;
+    padding: 0 1em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: visible!important;
+}
+.UI-slider--base,
+.UI-slider--fill{
+    y: 50%;
+    stroke: none;
+    height: 0.1em;
+    transform: translateY(-0.05em);
+}
+.UI-slider--base {
+    fill: rgba(0,0,0,0.4)
+}
+.UI-slider--knob {
+    r: 0.8em;
+    fill: #BackgroundColor;
+    stroke-width: 2;
+}
