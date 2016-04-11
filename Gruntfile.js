@@ -10,6 +10,12 @@ module.exports = function(grunt) {
 
         pkg: appConfig,
 
+        // -- Clean Config ---------------------------------------------------------
+
+        clean: {
+            default: ['build/']
+        },
+
         // -- Concat Config --------------------------------------------------------
         concat: {
             options: {
@@ -68,6 +74,33 @@ module.exports = function(grunt) {
             }
         },
 
+        // -- CSSMin Config --------------------------------------------------------
+
+        cssmin: {
+            options: {
+                noAdvanced: true
+            },
+
+            files: {
+                expand: true,
+                src: 'build/*.css',
+                ext: '-min.css'
+            }
+        },
+	
+	// -- Uglify Config --------------------------------------------------------
+	uglify: {
+	    options: {
+		sourceMap: true,
+		//banner: '/*! <%= appConfig.name %> <%= appConfig.version %> | <%= appConfig.author %> | <%= appConfig.license %> Licensed */'
+	    },
+	    files: {
+		expand: true,
+                src: 'build/*.js',
+                ext: '-min.js'
+	    }
+	},
+
         // -- Watch JS SRC for changes ---------------------------------------------------------
         watch: {
             files: [
@@ -87,9 +120,12 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
+	'clean',
         'concat:js',
+	'uglify',
         'concat:css',
         'replace',
-        'concat:deps'
+        'concat:deps',
+	'cssmin'
     ]);
 };
