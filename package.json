@@ -1,20 +1,36 @@
 {
   "name": "com.likalo.ui",
-  "author": "MiM Development Team",
-  "version": "0.1.0",
+  "description": "A set of clean an simple Angular.js widgets to use in a webapp project.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/likalo/UI.git"
+  },
+  "files": "build/",
+  "version": "0.1.4",
   "description": "",
   "license": "Proprietary",
-  "dependencies": {
-    "@iamadamjowett/angular-click-outside": "^2.7.0",
-    "angular": "^1.5.2",
-    "connect-livereload": "~0.3.2",
+  "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-text-replace": "^0.4.0",
     "grunt-ng-annotate": "^1.0.1",
+    "connect-livereload": "~0.3.2",
     "load-grunt-tasks": "~0.2.1"
   },
+  "bugs": {
+    "url": "https://github.com/likalo/UI/issues"
+  },
+  "main": "build/ui.js",
+  "keywords": [
+    "ui",
+    "js",
+    "angular",
+    "likalo.com"
+  ],
+  "authors": [
+    "it-s <eugene.trounev@likalo.com>"
+  ],
   "engines": {
     "node": ">=0.8.0"
   }
