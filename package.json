@@ -1,13 +1,12 @@
 {
   "name": "com.likalo.ui",
-  "description": "A set of clean an simple Angular.js widgets to use in a webapp project.",
+  "description": "",
   "repository": {
     "type": "git",
     "url": "git://github.com/likalo/UI.git"
   },
   "files": "build/",
   "version": "0.1.4",
-  "description": "",
   "license": "Proprietary",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -20,7 +19,8 @@
     "grunt-text-replace": "^0.4.0",
     "grunt-ng-annotate": "^1.0.1",
     "connect-livereload": "~0.3.2",
-    "load-grunt-tasks": "~0.2.1"
+    "load-grunt-tasks": "~0.2.1",
+    "ng-dialog": "^0.6.0"
   },
   "bugs": {
     "url": "https://github.com/likalo/UI/issues"
@@ -37,5 +37,7 @@
   ],
   "engines": {
     "node": ">=0.8.0"
+  },
+  "dependencies": {
   }
 }
