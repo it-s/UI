@@ -30,12 +30,27 @@ angular.module('com.likalo.ui')
         };
     })
     .directive('uiToggleLink', ['$timeout', '$document', function uiToggleLink($timeout, $document) {
-        var document = $document[0];
+        function findElementBySelector(selector, el) {
+            var document = $document[0];
+            if(selector[0] === "#") return angular.element(
+              document.getElementById(selector.substr(1))
+            );
+            if(selector[0] === ".") return angular.element(
+              document.getElementsByClassName(selector.substr(1))
+            );
+            if(selector === ":parent") return el.parent();
+            if(selector === ":previous") return el.previous();
+            if(selector === ":next") return el.next();
+            return angular.element(
+              document.getElementsByTagName(selector)
+            );
+        }
         return {
             restrict: 'A',
             link: function($scope, $el, $attrs) {
                 var active = $attrs['uiToggle'] || 'active',
-                    target = angular.element(document.getElementById($attrs.uiToggleLink));
+                    selector = ($attrs.uiToggleLink !== "")? $attrs.uiToggleLink : "parent",
+                    target = findElementBySelector(selector, $el);
                 if(angular.isObject(target)) {
                     target.addClass('UI-toggle--linked');
                     $timeout(function(){
