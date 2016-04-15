@@ -36,7 +36,7 @@ svg.UI-icon.UI-icon--hover-base-hide:hover>.UI-layer--base {
 svg.UI-icon:hover>.UI-layer--hover,
 svg.UI-icon:active>.UI-layer--active,
 svg.UI-icon.active>.UI-layer--active {
-  display: block;
+  opacity: 1;
 }
 svg.UI-monogram {
  display: inline;
