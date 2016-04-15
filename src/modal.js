@@ -15,11 +15,10 @@ angular.module('com.likalo.ui')
        });
    },
    modal: function(template, controller, more){
-    return ngDialog.open(angular.extend({
+    return ngDialog.openConfirm(angular.extend({
         showClose: false,
-        closeByEscape: true,
-        closeByDocument: true,
-        closeByNavigation: true,
+        closeByEscape: false,
+        closeByDocument: false,
         className: 'UI-modal UI-modal--dialog',
         template: template,
         controller: controller

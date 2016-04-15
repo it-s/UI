@@ -121,6 +121,11 @@
   color: #TextColor;
 }
 
+.UI-modal--header {
+    border-bottom: 1px solid #BorderColor;
+    margin-bottom: 1em;
+}
+
 .UI-modal--footer {
     border-top: 1px solid #BorderColor;
     margin-bottom: -0.5em;
