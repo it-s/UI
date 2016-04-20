@@ -51,6 +51,6 @@ svg.UI-monogram {
 }
 .UI-monogram--glyph {
   fill: #AccentColor;
-  letter-spacing: -1;
+  letter-spacing: -1px;
   text-transform: capitalize;
 }
