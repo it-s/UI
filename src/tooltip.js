@@ -95,6 +95,7 @@ angular.module('com.likalo.ui')
     $scope.$on(
      "$destroy",
      function handleDestroyEvent() {
+      render({type:'mouseout'});
       $el.off('hover', render);
      }
     );
