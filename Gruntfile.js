@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
     var appConfig = grunt.file.readJSON('package.json');
-    var theme = grunt.file.readJSON('theme.json');
+    var theme = grunt.file.readJSON(grunt.option('theme') || 'theme.json');
     // Load grunt tasks automatically
     // see: https://github.com/sindresorhus/load-grunt-tasks
     require('load-grunt-tasks')(grunt);
