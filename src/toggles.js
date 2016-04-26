@@ -57,6 +57,10 @@ angular.module('com.likalo.ui')
                         target.toggleClass(active, $el.hasClass(active));
                     },1);
                     $scope.$watch(function isActive() {return $el.hasClass(active); }, function(isActive){
+                        //If the target wasn't found initially
+                        //  try to find it now
+                        if(angular.isUndefined(target) || target.length === 0)
+                            target = findElementBySelector(selector, $el);
                         target.toggleClass(active, isActive);
                     });
                 }
