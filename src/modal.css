@@ -124,6 +124,7 @@
 .UI-modal--header {
     border-bottom: 1px solid #BorderColor;
     margin-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 .UI-modal--footer {
