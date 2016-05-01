@@ -59,7 +59,7 @@
     transition-property: opacity;
     transition-duration: 300ms;
 }
-.active .UI-picker--list {
+.UI-picker.active .UI-picker--list {
     opacity: 1;
     height: auto;
     overflow: visible;
