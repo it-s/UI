@@ -72,7 +72,7 @@
   -webkit-animation: ngdialog-flyin .3s;
   animation: ngdialog-flyin .3s;
   background: #BackgroundColor;
-  border-radius: 5px;
+  border-radius: 4px 4px 0 0;
   margin: 0 auto;
   max-width: 95%;
   width: 32em;
@@ -92,15 +92,7 @@
  border-radius: 0;
 }
 
-.UI-modal .ngdialog-close {
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.UI-modal .ngdialog-close:before {
+/*.UI-modal .ngdialog-close:before {
   background: transparent;
   border-radius: 3px;
   color: #TextShade;
@@ -114,7 +106,7 @@
   text-align: center;
   top: 3px;
   width: 30px;
-}
+}*/
 
 .UI-modal .ngdialog-close:hover:before,
 .UI-modal .ngdialog-close:active:before {
@@ -122,9 +114,26 @@
 }
 
 .UI-modal--header {
-    border-bottom: 1px solid #BorderColor;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
+    background-color: #BackgroundShade;
+    color: #TextShade;
+    padding: 1em;
+    border-radius: 4px 4px 0 0;
+}
+
+.UI-modal .ngdialog-close {
+    color: #TextShade;
+    cursor: pointer;
+    content: '\00D7';
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    padding: 1em;
+    font-weight: bold;
+}
+
+.UI-modal--content {
+    padding: 1em;
 }
 
 .UI-modal--footer {
