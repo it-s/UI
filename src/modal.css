@@ -86,10 +86,21 @@
 .UI-modal.UI-modal--alert .ngdialog-content {
   width: 20em;
 }
+.UI-modal.UI-modal--wide .ngdialog-content {
+  width: 48em;
+}
+.UI-modal.UI-modal--xwide .ngdialog-content {
+  width: 64em;
+}
 .UI-modal.UI-modal--view .ngdialog-content {
  width: 100%;
  min-height: 100%;
  border-radius: 0;
+}
+.UI-modal.UI-modal--wide,
+.UI-modal.UI-modal--xwide {
+  padding-bottom: 4em;
+  padding-top: 4em;  
 }
 
 /*.UI-modal .ngdialog-close:before {
