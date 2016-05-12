@@ -31,20 +31,30 @@ angular.module('com.likalo.ui')
         return el[0];
       }
 
-      function findElementBySelector(selector, el) {
-        var document = $document[0];
+      function findElementBySelector(selector, $el) {
+        var document = $document[0],
+            el = elementUnwrap($el);
         if (selector[0] === "#") return angular.element(
           document.getElementById(selector.substr(1))
         );
-        if (selector[0] === ".") return angular.element(
-          document.getElementsByClassName(selector.substr(1))
-        );
-        if (selector === ":parent") return el.parent();
-        if (selector === ":previous") return el.previous();
-        if (selector === ":next") return el.next();
-        return angular.element(
-          document.getElementsByTagName(selector)
-        );
+        if (el) {
+          if (selector === ":parent") return el.parent();
+          if (selector === ":previous") return el.previous();
+          if (selector === ":next") return el.next();
+          if (selector[0] === ".") return angular.element(
+            el.getElementsByClassName(selector.substr(1))
+          );
+          return angular.element(
+            el.getElementsByTagName(selector)
+          );
+        } else {
+          if (selector[0] === ".") return angular.element(
+            document.getElementsByClassName(selector.substr(1))
+          );
+          return angular.element(
+            document.getElementsByTagName(selector)
+          );
+        }
       }
 
       return {
