@@ -90,6 +90,12 @@ angular.module('com.likalo.ui')
             if (!value) return;
             tooltip = value;
           });
+          if($attrs['tooltipTitle']){
+            $attrs.$observe('tooltipTitle', function (value) {
+              if (!value) return;
+              title = value;
+            });
+          }
           $attrs.$observe('tooltipPosition', function (value) {
             if (!value) return;
             hint = value;
