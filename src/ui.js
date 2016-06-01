@@ -2,7 +2,6 @@
  * Angular.js application configuration
  * Used in com.Likalo.MiM
  *
- * Use of Class.js
  *
  * @author eugene.trounev(a)likalo.com
  */
