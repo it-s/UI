@@ -44,5 +44,5 @@
   opacity: 1;
 }
 .UI-switch.active>.UI-toggle--knob{
-  transform: translateX(100%);
+  transform: translateX(12px);
 }
