@@ -1,4 +1,8 @@
 /*.UI-scrollable,*/
+.ui-scrollable {
+	position:relative;
+	overflow:hidden;
+}
 
 .UI-scrollable--container {
     padding-right: 0.5em;

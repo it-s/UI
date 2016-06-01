@@ -77,10 +77,10 @@ function uiScrollbar($window, $document, $timeout) {
 
 function uiScrollable() {
   return {
-    restrict: 'A',
+    restrict: 'C',
     transclude: true,
     replace: true,
-    template: '<div class="UI-scrollable"><div class="UI-scrollable--container"><div class="UI-scrollable--content" ng-transclude=""></div></div><ui-scrollbar></ui-scrollbar></div>',
+    template: '<div><div class="UI-scrollable--container"><div class="UI-scrollable--content" ng-transclude=""></div></div><ui-scrollbar></ui-scrollbar></div>',
     link: function ($scope, $el, $attrs, uiScrollable) {
       var el = $el[0],
         container = el.children[0];
