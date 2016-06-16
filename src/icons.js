@@ -22,6 +22,27 @@ angular.module('com.likalo.ui')
     active: "@",
     overlay: "@"
    },
+   link: function($scope, $el, $attrs){
+      $attrs.$observe('type', function (value) {
+            if (!value || angular.isUndefined($scope['layers'])) return;
+            $scope.layers[0].src = value;
+          });
+      // if($scope['hover'])
+      // $attrs.$observe('hover', function (value) {
+      //       if (!value) return;
+      //       tooltip = value;
+      //     });
+      // if($scope['active'])
+      // $attrs.$observe('active', function (value) {
+      //       if (!value) return;
+      //       tooltip = value;
+      //     });
+      // if($scope['overlay'])
+      // $attrs.$observe('overlay', function (value) {
+      //       if (!value) return;
+      //       tooltip = value;
+      //     });
+   },
    controller: function($scope) {
     $scope['layers'] = [];
     $scope['layers'].push({type: 'base', src: $scope['type'] || "unknown"});
