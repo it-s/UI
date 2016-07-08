@@ -63,6 +63,19 @@ module.exports = function(grunt) {
                 }]
             }
         },
+    
+        // -- Angular Annotate Config --------------------------------------------------------
+        ngAnnotate: {
+            options: {
+                singleQuotes: true,
+            },
+            files: {
+                expand: true,
+                src   : [
+                    'build/ui.js'
+                ]
+            }
+        },
 
         // -- Replace Config -------------------------------------------------------
 
@@ -120,12 +133,13 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
-	'clean',
+    	'clean',
         'concat:js',
-	'uglify',
+        'ngAnnotate',
+    	'uglify',
         'concat:css',
         'replace',
         'concat:deps',
-	'cssmin'
+    	'cssmin'
     ]);
 };
