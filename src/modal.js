@@ -36,7 +36,7 @@ angular.module('com.likalo.ui')
         },
         view: function (template, controller, more) {
           return ngDialog.open(angular.extend({
-            showClose: false,
+            showClose: true,
             closeByEscape: false,
             closeByDocument: false,
             closeByNavigation: true,

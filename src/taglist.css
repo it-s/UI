@@ -1,0 +1,52 @@
+.UI-taglist {
+    display: inline;
+    padding: 0;
+}
+.UI-taglist>li:not(:last-child) {
+    margin-right: 0.5em;
+}
+.UI-taglist--interactive>li{
+	cursor: pointer;
+}
+.UI-taglist--interactive>li:hover {
+    border-color: #AccentColor;
+}
+.UI-taglist--adder,
+.UI-taglist--placeholder {
+	display: inline-block;
+    font-size: 80%;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+}
+.UI-taglist--tag {
+	margin: 0 -0.5em;
+    padding: 0 0.5em;
+}
+.UI-taglist--remove {
+    margin: 0 -0.2em 0 0.5em;
+    background: #AccentColor;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    line-height: 1em;
+    text-align: center;
+    color: #AccentText;
+    border-radius: 50%;
+    opacity: 0.8;
+	cursor: pointer;
+}
+.UI-taglist--remove:hover {
+    opacity: 1;
+}
+.UI-taglist--input {
+	width: 2em;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0 0.2em;
+    box-sizing: border-box;
+    transition: width 300ms;
+}
+.UI-taglist--input:focus {
+    width: 6em;
+}
