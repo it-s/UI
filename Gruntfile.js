@@ -32,6 +32,10 @@ module.exports = function(grunt) {
                     'build/ui.js': [
                         './src/ui.js',
                         './src/*.js'
+                    ],
+                    'build/uihelpers.js': [
+                        './src/helpers/helpers.js',
+                        './src/helpers/*.js'
                     ]
                 }]
             },
@@ -72,7 +76,8 @@ module.exports = function(grunt) {
             files: {
                 expand: true,
                 src   : [
-                    'build/ui.js'
+                    'build/ui.js',
+                    'build/uihelpers.js'
                 ]
             }
         },

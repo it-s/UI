@@ -4,6 +4,7 @@
   position: absolute;
   padding: 0.5em;
   z-index: 999;
+  pointer-events: none;
   transition: 300ms;
 }
 .UI-tooltip--top,
