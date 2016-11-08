@@ -39,9 +39,9 @@ angular.module('com.likalo.ui')
           document.getElementById(selector.substr(1))
         );
         if (el) {
-          if (selector === ":parent") return el.parentElement;
-          if (selector === ":previous") return el.previousSibling;
-          if (selector === ":next") return el.nextSibling;
+          if (selector === ":parent") return angular.element(el.parentElement);
+          if (selector === ":previous") return angular.element(el.previousSibling);
+          if (selector === ":next") return angular.element(el.nextSibling);
           if (selector[0] === ".") return angular.element(
             el.getElementsByClassName(selector.substr(1))
           );
