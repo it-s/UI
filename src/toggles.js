@@ -41,7 +41,7 @@ angular.module('com.likalo.ui')
         restrict: 'A',
         link: function ($scope, $el, $attrs) {
           var active = $attrs['uiToggle'] || 'active',
-            selector = ($attrs.uiToggleLink !== "") ? $attrs.uiToggleLink : "parent",
+            selector = ($attrs.uiToggleLink !== "") ? $attrs.uiToggleLink : ":parent",
             target = $uiTools.findElementBySelector(selector, $el);
           if (angular.isObject(target)) {
             target.addClass('UI-toggle--linked');
